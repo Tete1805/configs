@@ -1,0 +1,15 @@
+[alias]
+        co = checkout
+        br = branch
+        st = status
+        rbi = rebase -i
+        rbih = rebase -i HEAD~
+        cp = cherry-pick
+        unstage = reset HEAD --
+        last = log -1 HEAD
+        tree = log --oneline --graph
+        branch-name = rev-parse --abbrev-ref HEAD
+        publish = !git push -u origin ${git branch-name)
+        track = !git branch -u remotes/origin/$(git branch-name)
+[core]
+        editor = nano
