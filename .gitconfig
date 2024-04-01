@@ -13,3 +13,7 @@
         track = "!git branch -u remotes/origin/$(git branch-name)"
 [core]
         editor = nano
+[push]
+        autoSetupRemote = true
+[rebase]
+        updateRefs = true
