@@ -1,5 +1,7 @@
 [alias]
         co = checkout
+        sw = switch
+        swc = switch -c
         br = branch
         st = status
         rbi = rebase -i
@@ -13,9 +15,10 @@
         track = "!git branch -u remotes/origin/$(git branch-name)"
 [core]
         editor = nano
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [push]
-        autoSetupRemote = true
-[pull]
-        rebase = true
-[rebase]
-        updateRefs = true
+	autoSetupRemote = true
